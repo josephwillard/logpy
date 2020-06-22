@@ -1,7 +1,9 @@
 from os.path import exists
 from setuptools import setup
+from Cython.Build import cythonize
 
 setup(name='kanren',
+      ext_modules=cythonize("kanren/*.pyx"),
       version='0.2.3',
       description='Logic Programming in python',
       url='http://github.com/logpy/logpy',
